@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "jsonplaceholder"
+version = "0.1.0"
+description = "A small publishable client for the JSONPlaceholder API."
+readme = "README.md"
+authors = ["Demo Maintainer <demo@example.com>"]
+
+packages = [
+  { include = "client.py", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+requests = ">=2.32,<3.0"
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
