@@ -11,7 +11,8 @@ A small publishable Python module that wraps selected JSONPlaceholder endpoints.
 
 ```text
 jsonplaceholder/
-├── src/client.py
+├── src/jsonplaceholder/__init__.py
+├── src/jsonplaceholder/client.py
 ├── requirements.txt
 ├── README.md
 └── pyproject.toml
@@ -29,10 +30,14 @@ python -m pip install -r requirements.txt
 python -m pip install ../jsonplaceholder
 ```
 
-## Build and publish
+## Build
 
 ```bash
-poetry build
-python -m twine upload dist/*
+python -m build
 ```
-# jsonplaceholder
+
+## Publish to Artifactory
+
+```bash
+python -m twine upload --repository-url http://localhost:8081/artifactory/api/pypi/pypi-local dist/*
+```
