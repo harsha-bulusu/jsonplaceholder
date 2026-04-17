@@ -4,9 +4,8 @@ version = "0.1.0"
 description = "A small publishable client for the JSONPlaceholder API."
 readme = "README.md"
 authors = ["Demo Maintainer <demo@example.com>"]
-
-include = [
-  { path = "src", format = ["sdist", "wheel"] }
+packages = [
+  { include = "jsonplaceholder", from = "src" }
 ]
 
 [tool.poetry.dependencies]
