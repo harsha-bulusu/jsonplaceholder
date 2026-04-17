@@ -5,8 +5,8 @@ description = "A small publishable client for the JSONPlaceholder API."
 readme = "README.md"
 authors = ["Demo Maintainer <demo@example.com>"]
 
-packages = [
-  { include = "client.py", from = "src" }
+include = [
+  { path = "src", format = ["sdist", "wheel"] }
 ]
 
 [tool.poetry.dependencies]
